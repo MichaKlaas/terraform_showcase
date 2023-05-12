@@ -7,7 +7,7 @@ resource "aws_instance" "tf-showcase" {
   ami           = lookup(var.awsprops, "ami")
   instance_type = lookup(var.awsprops, "itype")
   #  subnet_id = lookup(var.awsprops, "subnet") #FFXsubnet2
-  subnet_id                   = data.aws_subnets.available.ids[0]
+  subnet_id                   = data.aws_subnets.available.ids["${var.subnet-count}"]
   associate_public_ip_address = lookup(var.awsprops, "publicip")
   #key_name                    = lookup(var.awsprops, "keyname")
 

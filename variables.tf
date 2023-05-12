@@ -38,6 +38,11 @@ variable "instance-device-num" {
   default     = "001"
 }
 
+variable "subnet-count" {
+  type = number
+  default = 0
+}
+
 variable "awsprops" {
   type = map(any)
   default = {
