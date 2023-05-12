@@ -22,7 +22,7 @@ resource "aws_instance" "tf-showcase" {
     #volume_type           = "gp2"
   }
   tags = {
-    Name        = "MiKa_showcase-${upper("${var.instance-device-type}${var.instance-device-site-number}${var.instance-device-business_unit}${var.instance-device-env}${var.instance-device-num}-${random_string.suffix.result}")}"
+    Name        = "MiKa_showcase-${upper("${var.instance-device-type}${var.instance-device-site-number}${var.instance-device-business_unit}${var.instance-device-env}${var.instance-device-num}")}"
     Environment = "DEV"
     OS          = "UBUNTU"
     Managed     = "IAC"
